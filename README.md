@@ -37,7 +37,6 @@ INFO:cgxCopyMGMT:----- Success
 
 Example of "interfaces file":
 ```
-bash:cgxCopyMGMT dan$ cat t_list.csv 
 Dan 2k,3
 DC Device,14
 ```
