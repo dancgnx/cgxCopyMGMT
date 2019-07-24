@@ -38,7 +38,7 @@ def getDeviceManagementExtensionByInterface(cgx,site_id,element_id,interface_id)
 
 def pasteDeviceManagementAccessToInterface(cgx,s_ext,t_elementname,t_interfacename):
 
-    log.info(f"Copy to interface {t_interfacename} of element{t_elementname}")
+    log.info(f"Copy to interface {t_interfacename} of element {t_elementname}")
 
     # get interface details
     t_element = getElementByName(cgx,t_elementname)
