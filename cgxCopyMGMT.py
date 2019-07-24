@@ -111,6 +111,9 @@ if __name__ == "__main__":
         with open(args["interface_file"]) as f:
             interfaces = csv.reader(f)
             for interface in interfaces:
+                if len(interface) != 2:
+                    log.error(f"Invalid line. Should have 'element name,interfacename' but got {','.join(interface)}")
+                    sys.exit(-1)
                 pasteDeviceManagementAccessToInterface(cgx,s_ext,interface[0],interface[1])
     else:
         print ("ERROR: You must specify target element and target itnerface or a file with list of targets")
