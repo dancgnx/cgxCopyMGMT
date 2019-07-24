@@ -2,7 +2,7 @@
 
 WARNING: USE AT YOUR OWN RISK
 
-Copy Device Management Policy from one interface to anotehr
+Copy Device Management Policy from one interface to another
 
 Instructions:
 
