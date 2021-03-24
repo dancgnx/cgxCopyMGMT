@@ -129,6 +129,8 @@ def go():
                               default=None, action="store_true",dest="list")
     custom_group.add_argument("--interfaces_file", help="A fiel with a list of target elements (claimed devices) and  target interfaces, comma separated, one interface per line",
                               default=None, action="store",dest="interface_file")
+    custom_group.add_argument("--t_file", help="Target file to be generated", default=None, type=argparse.FileType('w'))
+    custom_group.add_argument("--generate", help="Generate element list", default=False, action="store_true")
 
     ####
     #
