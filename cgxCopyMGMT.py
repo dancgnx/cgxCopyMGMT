@@ -120,8 +120,12 @@ if __name__ == "__main__":
     if args["list"]:
         jd(s_ext)
     elif args['generate']:
-        for element in cgx.get.elements().cgx_content['items']:
-            args['t_file'].write(f"{element['name']},{args['t_interface']}\n")
+        # check if 'e have all the re/uired information
+        if args['t_interface'] and args['t_file']:
+            for element in cgx.get.elements().cgx_content['items']:
+                args['t_file'].write(f"{element['name']},{args['t_interface']}\n")
+        else:
+            print("Error, t_interface and t_file must be specified")
     elif args["t_element"] and args["t_interface"]:
         # update a single target
         pasteDeviceManagementAccessToInterface(cgx,s_ext,args["t_element"],args["t_interface"])

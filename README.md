@@ -7,11 +7,12 @@ Copy Device Management Policy from one interface to another
 Instructions:
 
 * Install python3
-* Install cloudgenix python sdk : pip3 install cloudgenix
+* Install cloudgenix python sdk : `pip3 install cloudgenix`
 * Setup authentication as listed below
-* Create a csv file with the example at t_list.csv
-* run the script using: python3 cgxCopyMGMT.py --s_element "source claimed device name" --s_interface "source interface to copy from" --interfaces_file "file with a list of target itnerface to paste to"
-* You can also specify one target with the --t_element and --t_interface 
+* Create a csv file with the example at `t_list.csv`
+* run the script using: `python3 cgxCopyMGMT.py --s_element "source claimed device name" --s_interface "source interface to copy from" --interfaces_file "file with a list of target itnerface to paste to"`
+* You can also specify one target with the `--t_element` and `--t_interface`
+* To generate a list of all the elemnts and the target interface, use the `--generate` `--t_file` .A list of all the elements will be place in the --t_file file. The file will include ALL the elements, including DC/Hub devices and the `--s_element` itself
 
 cgxCopyMGMT.py looks for the following for AUTH, in this order of precedence:
 
